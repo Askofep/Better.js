@@ -23,7 +23,7 @@ class connection extends EventTarget {
     }
   }
 }
-lass bindableEvent extends CustomEvent {
+class bindableEvent extends CustomEvent {
   constructor(nme, funct, isSubEvent) {
     if (!isSubEvent) {
       this.onDestroy = new bindableEvent("onDestroy", function(funct) {
