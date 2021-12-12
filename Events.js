@@ -1,4 +1,4 @@
-class connection extends EventTarget {
+export default class connection extends EventTarget {
   constructor(evnt, funct) {
     this.onFire = funct
     this.evnt = evnt
@@ -23,7 +23,7 @@ class connection extends EventTarget {
     }
   }
 }
-class bindableEvent extends CustomEvent {
+export default class bindableEvent extends CustomEvent {
   constructor(nme, funct, isSubEvent) {
     if (!isSubEvent) {
       this.onDestroy = new bindableEvent("onDestroy", function(funct) {
